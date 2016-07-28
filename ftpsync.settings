@@ -1,0 +1,11 @@
+{
+	"default": {
+		"host": "67.23.236.49",
+		"username": "desarrollo@himalayainternetmarketing.com",  // or null for anonymous login
+		"password": "[W53rcXh2Uwm",
+		"path": "/facebookbadge/",
+
+		"upload_on_save": false, // set *false* if you do not want to upload on save!
+		"overwrite_newer_prevention": false,
+	}
+}

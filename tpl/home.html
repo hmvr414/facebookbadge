@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="app">
+      <div class="col-md-12 title">
+      <h3>Droguerías Comfandi</h3>
+    </div>
+    <div class="col-md-12 hidden">
+      <img id="imagen-perfil" src="img/placeholder.png">
+      <div class="respuesta">
+        
+      </div>
+    </div>
+    <!-- <div class="col-md-2"></div> -->
+    <div class="col-md-12">
+      <div class="marco">
+        <canvas id="dibujo"  width="500" height="500"></canvas>
+      <div class="slider-fondo">
+        <div class="slider-de-overlays">
+        <% _.each(overlays, function (overlay) { %>
+        
+        <div><img src="<%= overlay.get('imagen') %>" width:"100px" height="100px"></div>
+
+        <% }); %>
+    </div>
+      </div>
+      </div>
+    </div>
+    <div class="logo-comfandi col-md-6 col-xs-6"><img class="img-responsive" src="img/logo-comfandi.png" alt=""></div>
+    <div class="share-facebook col-md-6 col-xs-6"><img class="img-responsive take-photo" src="img/me gusta.png" alt=""></div>
+  </div>
+    </div>
+</div>

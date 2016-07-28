@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Droguerías comfandi</title>
+	<meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+	<script
+	  src="https://code.jquery.com/jquery-2.2.3.min.js"
+	  integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+	  crossorigin="anonymous">
+	</script>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<link rel="stylesheet" href="assets/css/slick.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/libs/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+	// Fn to allow an event to fire after all images are loaded
+$.fn.imagesLoaded = function () {
+
+    // get all the images (excluding those with no src attribute)
+    var $imgs = this.find('img[src!=""]');
+    // if there's no images, just return an already resolved promise
+    if (!$imgs.length) {return $.Deferred().resolve().promise();}
+
+    // for each image, add a deferred object to the array which resolves when the image is loaded (or if loading fails)
+    var dfds = [];  
+    $imgs.each(function(){
+
+        var dfd = $.Deferred();
+        dfds.push(dfd);
+        var img = new Image();
+        img.onload = function(){dfd.resolve();}
+        img.onerror = function(){dfd.resolve();}
+        img.src = this.src;
+
+    });
+
+    // return a master promise object which will resolve when all the deferred objects have resolved
+    // IE - when all the images are loaded
+    return $.when.apply($,dfds);
+
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+	</head>
+	<body>
+	<div id="content">
+		<div id="primary"></div>
+	</div>
+	<script type="text/javascript" data-main="js/app/facebookbadge" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+	</body>
+</html>

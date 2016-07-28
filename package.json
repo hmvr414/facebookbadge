@@ -1,0 +1,19 @@
+{
+  "name": "facebookbadge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "vinyl-ftp": "^0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hermann",
+  "license": "ISC"
+}
